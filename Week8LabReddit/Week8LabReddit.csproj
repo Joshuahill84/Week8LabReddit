@@ -139,10 +139,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Posts.cs" />
+    <Compile Include="Migrations\201512142108090_initialcreate.cs" />
+    <Compile Include="Migrations\201512142108090_initialcreate.Designer.cs">
+      <DependentUpon>201512142108090_initialcreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512142128422_url.cs" />
+    <Compile Include="Migrations\201512142128422_url.Designer.cs">
+      <DependentUpon>201512142128422_url.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512142156538_popularity.cs" />
+    <Compile Include="Migrations\201512142156538_popularity.Designer.cs">
+      <DependentUpon>201512142156538_popularity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DreadditContext.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +195,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Posts\Create.cshtml" />
+    <Content Include="Views\Posts\Delete.cshtml" />
+    <Content Include="Views\Posts\Details.cshtml" />
+    <Content Include="Views\Posts\Edit.cshtml" />
+    <Content Include="Views\Posts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,6 +211,17 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201512142108090_initialcreate.resx">
+      <DependentUpon>201512142108090_initialcreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512142128422_url.resx">
+      <DependentUpon>201512142128422_url.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512142156538_popularity.resx">
+      <DependentUpon>201512142156538_popularity.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
